@@ -149,6 +149,103 @@ body {
   box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
+
+    /* QR floating button wrapper (bottom right) */
+    .qr-button-wrapper {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 9999;
+      display: flex;
+      align-items: flex-end;
+      pointer-events: auto;
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    .qr-btn {
+      min-width: 52px;
+      min-height: 44px;
+      padding: 6px 10px;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.4px;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .qr-btn img { width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+
+    .qr-popup {
+      position: absolute;
+      right: 0;
+      bottom: 72px; /* places popup above the button */
+      width: 160px; /* square popup */
+      height: 160px;
+      padding: 8px;
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.16);
+      display: none; /* hide initially */
+      align-items: center;
+      justify-content: center;
+      pointer-events: auto;
+    }
+
+    .qr-popup.active { display: flex; }
+
+    .qr-popup img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 6px;
+      display: block;
+    }
+
+    .qr-close {
+      position: absolute;
+      top: -20px;
+      right: 0px;
+      background: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      line-height: 1;
+      color: #333;
+      cursor: pointer;
+      padding: 2px 6px;
+    }
+
+    /* Accessible focus styles */
+    .qr-btn:focus, .qr-close:focus { outline: 2px solid #006fbf; outline-offset: 2px; }
+
+    /* Textual styling for side bar buttons (use instead of icon images) */
+    .side-bar .side-btn {
+      width: 86px;
+      height: 44px;
+      border-radius: 8px;
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,0.06);
+      margin: 8px 0;
+      padding: 6px 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: #222;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    .side-bar .side-btn:hover {
+      background: #f5f7fb;
+    }
+
+    .side-bar .side-btn:active {
+      transform: translateY(1px);
+    }
+
 /* Small screens: move to bottom and align horizontally */
 @media (max-width: 767px) {
   .side-bar {

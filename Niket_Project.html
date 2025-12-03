@@ -38,36 +38,110 @@
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+  </style>
+
 </head>
 
 <body>
   <!-- Top navigation -->
-  <nav class="top-nav" role="navigation" aria-label="Main navigation">
+  <nav class="top-nav" id="top-nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <div class="nav-left">
         <img src="Icons/SJLogo.png" alt="sj_logo" class="nav-logo" style="width: 10%; height: auto;">
       </div>
-      <!-- <ul class="nav-right">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Scenes</a></li>
-        <li><a href="#">Docs</a></li>
-      </ul> -->
     </div>
   </nav>
 
   <!-- Vertical / bottom sidebar with 6 image buttons -->
-  <div class="side-bar" role="navigation" aria-label="Tools">
-    <button class="side-btn" id="Tool_1" title="Tool 1"><img src="Icons/Btn_1.png" alt="Tool 1"></button>
+  <div class="side-bar" id="side-bar" role="navigation" aria-label="Tools">
+<!-- -    <button class="side-btn" id="Tool_1" title="Tool 1"><img src="Icons/Btn_1.png" alt="Tool 1"></button>
     <button class="side-btn" id="Tool_2" title="Tool 2"><img src="Icons/Btn_2.png" alt="Tool 2"></button>
-    <button class="side-btn" id="Tool_3" title="Tool 3"><img src="Icons/Btn_1.png" alt="Tool 3"></button>
+    <button class="side-btn" id="Tool_3" title="Tool 3"><img src="Icons/Btn_1.png" alt="Tool 3"></button> -->
+    <button class="side-btn" id="Tool_1" title="WagonR" aria-label="WagonR">WagonR</button>
+    <button class="side-btn" id="Tool_2" title="Truck" aria-label="Truck">Truck</button>
+    <button class="side-btn" id="Tool_3" title="Audi" aria-label="Audi">Audi</button>
     <!-- <button class="side-btn" id="Tool_4" title="Tool 4"><img src="Icons/Btn_2.png" alt="Tool 4"></button>
     <button class="side-btn" id="Tool_5" title="Tool 5"><img src="Icons/Btn_1.png" alt="Tool 5"></button>
     <button class="side-btn" id="Tool_6" title="Tool 6"><img src="Icons/Btn_2.png" alt="Tool 6"></button> -->
   </div>
 
+  <!-- New: bottom-right floating QR / scanner button + popup -->
+  <div class="qr-button-wrapper" id="qr-button-wrapper" aria-hidden="false">
+<!-- -    <button id="qr-button" class="side-btn qr-btn" title="Open QR scanner" aria-haspopup="dialog" aria-expanded="false" aria-controls="qr-popup">
+      <img src="Icons/Btn_1.png" alt="Open QR scanner">
+    </button> -->
+    <button id="qr-button" class="side-btn qr-btn" title="QR" aria-haspopup="dialog" aria-expanded="false" aria-controls="qr-popup" aria-label="QR">QR</button>
+
+    <div id="qr-popup" class="qr-popup" role="dialog" aria-label="Project QR code" aria-hidden="true">
+      <img id="qr-img" src="Icons/MyVergeSite.png" alt="QR code to open this project in mobile browser">
+      <button id="qr-close" class="qr-close" aria-label="Close QR view">&times;</button>
+    </div>
+  </div>
+
   <div id="v3d-container">
     <div id="fullscreen-button" class="fullscreen-button fullscreen-open" title="Toggle fullscreen mode"></div>
   </div>
+
+  <!-- New JavaScript: toggle popup, close on outside click and ESC, update ARIA -->
+  <script>
+    // Safe startup after DOM loads
+    (function () {
+      // Elements
+      var qrBtn = document.getElementById('qr-button');
+      var qrPopup = document.getElementById('qr-popup');
+      var qrClose = document.getElementById('qr-close');
+
+      if (!qrBtn || !qrPopup) return;
+
+      function toggleQr(open) {
+        var shouldOpen = (typeof open === 'boolean') ? open : !qrPopup.classList.contains('active');
+        if (shouldOpen) {
+          qrPopup.classList.add('active');
+          qrPopup.setAttribute('aria-hidden', 'false');
+          qrBtn.setAttribute('aria-expanded', 'true');
+        } else {
+          qrPopup.classList.remove('active');
+          qrPopup.setAttribute('aria-hidden', 'true');
+          qrBtn.setAttribute('aria-expanded', 'false');
+        }
+      }
+
+      qrBtn.addEventListener('click', function (ev) {
+        ev.stopPropagation();
+        toggleQr();
+      });
+
+      if (qrClose) {
+        qrClose.addEventListener('click', function (ev) {
+          ev.stopPropagation();
+          toggleQr(false);
+        });
+      }
+
+      // Click outside to close popup
+      document.addEventListener('click', function (ev) {
+        var target = ev.target;
+        if (!qrPopup.contains(target) && !qrBtn.contains(target)) {
+          toggleQr(false);
+        }
+      });
+
+      // ESC to close
+      document.addEventListener('keydown', function (ev) {
+        var key = ev.key || ev.keyCode;
+        if (key === 'Escape' || key === 'Esc' || key === 27) {
+          toggleQr(false);
+        }
+      });
+
+      // Optional: close popup on resize or scroll to avoid overlap
+      window.addEventListener('resize', function () { toggleQr(false); });
+      window.addEventListener('scroll', function () { toggleQr(false); });
+    })();
+  </script>
+
 </body>
 
 </html>

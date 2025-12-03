@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <tab name="Init" type="InitTab" active="true" scrollx="64.22398578194583" scrolly="-63.492063492063494" scale="0.9070294784580495">
+  <tab name="Init" type="InitTab" active="true" scrollx="114.00949788125604" scrolly="78.29165744469014" scale="0.8227024747918819">
     <block xmlns="https://developers.google.com/blockly/xml" type="initSettings" id="ruR7Ff7.M7bwo4$R;t6r" x="270" y="70">
       <field name="LOAD_COMP_ASSETS">FALSE</field>
       <field name="FULLSCREEN">TRUE</field>
@@ -7,53 +7,39 @@
       <field name="PRESERVE_DRAW_BUF">FALSE</field>
       <field name="FADE_ANNOTATIONS">TRUE</field>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="setHTMLElemStyle" id="nYsnd{B0+H}29fJ]|wIz" x="290" y="290">
+    <block xmlns="https://developers.google.com/blockly/xml" type="setCSSRuleStyle" id="D8!`#yW4y$IP4wZnXGJ^" x="270" y="310">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" mediaruleslot="false"></mutation>
       <field name="PROPERTY">display</field>
       <field name="PARENT">FALSE</field>
       <value name="VALUE">
-        <block type="text" id="one40]h%4E4)zTDH;U?L">
+        <shadow type="displayDropdown" id="%nH~6$GITwq}Gje$e.^H">
           <field name="TEXT">none</field>
-        </block>
+        </shadow>
       </value>
       <value name="ID">
-        <shadow type="text" id="Q|mu}`1oYbv+w1`l`LRE">
+        <shadow type="text" id="1Q4kITERS^[)6UMP=7pK">
           <field name="TEXT">top-nav</field>
         </shadow>
       </value>
       <next>
-        <block type="setHTMLElemStyle" id="AGa_5@b9,1c$%mv-*_=5">
+        <block type="setCSSRuleStyle" id="l4vq)J`KC*NSsq!B-913">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" mediaruleslot="false"></mutation>
           <field name="PROPERTY">display</field>
           <field name="PARENT">FALSE</field>
           <value name="VALUE">
-            <block type="text" id="M]-K#741J8OgqZL`NDst">
+            <shadow type="displayDropdown" id="b[O?R@?hhO$b0Go3rHu6">
               <field name="TEXT">none</field>
-            </block>
+            </shadow>
           </value>
           <value name="ID">
-            <shadow type="text" id="li;6RBg.sNC9H2W8r|7=">
+            <shadow type="text" id="--$[{f3)peWuoJWV0_m]">
               <field name="TEXT">side-bar</field>
             </shadow>
           </value>
-          <next>
-            <block type="setHTMLElemStyle" id="ffBkYwf=pD[f6sA+bK)Q">
-              <field name="PROPERTY">display</field>
-              <field name="PARENT">FALSE</field>
-              <value name="VALUE">
-                <block type="text" id="b0FXV4E7b2HT0uff*~Sj">
-                  <field name="TEXT">none</field>
-                </block>
-              </value>
-              <value name="ID">
-                <shadow type="text" id="YP:GCh+{lPJ31INC|GEP">
-                  <field name="TEXT">qr-button-wrapper</field>
-                </shadow>
-              </value>
-            </block>
-          </next>
         </block>
       </next>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="setCSSRuleStyle" id="hz)8PEeS?5rUT5@T$cRh" x="326" y="438">
+    <block xmlns="https://developers.google.com/blockly/xml" type="setCSSRuleStyle" id="hz)8PEeS?5rUT5@T$cRh" x="250" y="430">
       <mutation xmlns="http://www.w3.org/1999/xhtml" mediaruleslot="false"></mutation>
       <field name="PROPERTY">backgroundImage</field>
       <field name="PARENT">FALSE</field>
@@ -190,7 +176,7 @@
       </next>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="false" scrollx="194.3841943011413" scrolly="196.28341498831924" scale="0.6768393620286869">
+  <tab name="New Tab" type="CommonTab" active="false" scrollx="242.26206279212795" scrolly="238.5837176896456" scale="0.8227024747918814">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="=~_#V42_{93s$**[;O@O">wagnorOnOff</variable>
       <variable id="qMwZ3C.}ROu|UC[^s8~x">towTruckOnOff</variable>
@@ -235,51 +221,20 @@
         </block>
       </next>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="setHTMLElemStyle" id="#C-s2I_#mYI-.W$.r1;N" x="230" y="-130">
+    <block xmlns="https://developers.google.com/blockly/xml" type="setCSSRuleStyle" id="O3osHu604DRWegWq1,mC" x="250" y="-110">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" mediaruleslot="false"></mutation>
       <field name="PROPERTY">display</field>
       <field name="PARENT">FALSE</field>
       <value name="VALUE">
-        <block type="text" id="b?Wk?,O!7,Ms{.goAdsO">
-          <field name="TEXT">flex</field>
-        </block>
+        <shadow type="displayDropdown" id="8`Wj^]Yo/(39pF-9;#^l">
+          <field name="TEXT">block</field>
+        </shadow>
       </value>
       <value name="ID">
-        <shadow type="text" id="}zT_zbZusVOS*i=dVBiT">
+        <shadow type="text" id="9;0)xsBjVAoG^z/I?DY|">
           <field name="TEXT">top-nav</field>
         </shadow>
       </value>
-      <next>
-        <block type="setHTMLElemStyle" id="e]rn$Sm/w3.VkJ4RH]U`">
-          <field name="PROPERTY">display</field>
-          <field name="PARENT">FALSE</field>
-          <value name="VALUE">
-            <block type="text" id="@-~Chz}~sKX9Sb:0r{{5">
-              <field name="TEXT">flex</field>
-            </block>
-          </value>
-          <value name="ID">
-            <shadow type="text" id="eHobmQg@#hA+)*mqV2(E">
-              <field name="TEXT">side-bar</field>
-            </shadow>
-          </value>
-          <next>
-            <block type="setHTMLElemStyle" id="at^FxMCUtljll229tWB:">
-              <field name="PROPERTY">display</field>
-              <field name="PARENT">FALSE</field>
-              <value name="VALUE">
-                <block type="text" id="V],TQS74AL^JO,N$m~+q">
-                  <field name="TEXT">flex</field>
-                </block>
-              </value>
-              <value name="ID">
-                <shadow type="text" id=")~+LXguZ,HF,![WeA1q4">
-                  <field name="TEXT">qr-button-wrapper</field>
-                </shadow>
-              </value>
-            </block>
-          </next>
-        </block>
-      </next>
     </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="igX?(l{^TkBpd8668?6L" x="210" y="50">
       <field name="EVENT">click</field>
@@ -753,5 +708,5 @@
       </statement>
     </block>
   </tab>
-  <editorsettings viewport-x="1006.1999999999998" viewport-y="37" viewport-w="682.8" viewport-h="395.5" viewport-hidden="true" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+  <editorsettings viewport-x="1006.1999999999998" viewport-y="37" viewport-w="682.8" viewport-h="395.5" viewport-hidden="true" toolbox-library-mode="true" toolbox-minimized-mode="false"></editorsettings>
 </xml>

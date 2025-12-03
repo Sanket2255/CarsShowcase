@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <tab name="Init" type="InitTab" active="true" scrollx="64.22398578194583" scrolly="-63.492063492063494" scale="0.9070294784580495">
+  <tab name="Init" type="InitTab" active="false" scrollx="64.22398578194588" scrolly="53.419699650303215" scale="0.9070294784580495">
     <block xmlns="https://developers.google.com/blockly/xml" type="initSettings" id="ruR7Ff7.M7bwo4$R;t6r" x="270" y="70">
       <field name="LOAD_COMP_ASSETS">FALSE</field>
       <field name="FULLSCREEN">TRUE</field>
@@ -34,26 +34,10 @@
               <field name="TEXT">side-bar</field>
             </shadow>
           </value>
-          <next>
-            <block type="setHTMLElemStyle" id="ffBkYwf=pD[f6sA+bK)Q">
-              <field name="PROPERTY">display</field>
-              <field name="PARENT">FALSE</field>
-              <value name="VALUE">
-                <block type="text" id="b0FXV4E7b2HT0uff*~Sj">
-                  <field name="TEXT">none</field>
-                </block>
-              </value>
-              <value name="ID">
-                <shadow type="text" id="YP:GCh+{lPJ31INC|GEP">
-                  <field name="TEXT">qr-button-wrapper</field>
-                </shadow>
-              </value>
-            </block>
-          </next>
         </block>
       </next>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="setCSSRuleStyle" id="hz)8PEeS?5rUT5@T$cRh" x="326" y="438">
+    <block xmlns="https://developers.google.com/blockly/xml" type="setCSSRuleStyle" id="hz)8PEeS?5rUT5@T$cRh" x="303" y="423">
       <mutation xmlns="http://www.w3.org/1999/xhtml" mediaruleslot="false"></mutation>
       <field name="PROPERTY">backgroundImage</field>
       <field name="PARENT">FALSE</field>
@@ -190,7 +174,7 @@
       </next>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="false" scrollx="194.3841943011413" scrolly="196.28341498831924" scale="0.6768393620286869">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="195.0385759193523" scrolly="216.40246502462196" scale="0.7462153966366274">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="=~_#V42_{93s$**[;O@O">wagnorOnOff</variable>
       <variable id="qMwZ3C.}ROu|UC[^s8~x">towTruckOnOff</variable>
@@ -262,22 +246,6 @@
               <field name="TEXT">side-bar</field>
             </shadow>
           </value>
-          <next>
-            <block type="setHTMLElemStyle" id="at^FxMCUtljll229tWB:">
-              <field name="PROPERTY">display</field>
-              <field name="PARENT">FALSE</field>
-              <value name="VALUE">
-                <block type="text" id="V],TQS74AL^JO,N$m~+q">
-                  <field name="TEXT">flex</field>
-                </block>
-              </value>
-              <value name="ID">
-                <shadow type="text" id=")~+LXguZ,HF,![WeA1q4">
-                  <field name="TEXT">qr-button-wrapper</field>
-                </shadow>
-              </value>
-            </block>
-          </next>
         </block>
       </next>
     </block>
